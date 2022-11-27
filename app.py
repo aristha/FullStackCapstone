@@ -260,18 +260,12 @@ def create_app(test_config=None):
       }), 404
 
   @app.errorhandler(AuthError)
-  def invalid_claims(ex):
-      
-      try:
-          print(ex.code)
-          print(ex.description)
-      except:
-        print(sys.exc_info())
-        return jsonify({
-                      "success": False,
-                      "error": ex.code,
-                      "message": ex.description
-                      })
+  def invalid_claims(error):
+    return jsonify({
+                    "success": False,
+                    "error": error.status_code,
+                    "message": error.error
+                    }), error.status_code
   return app
 app = create_app()
 

@@ -4,5 +4,5 @@ export EXCITED="true"
 export DATABASE_URL="postgresql://postgres:admin@localhost:5433/capston"
 export AUTH0_DOMAIN="dev-dh8lpj82.us.auth0.com"
 export ALGORITHMS='['RS256']'
-export API_AUDIENCE'http://localhost:5000/'
+export API_AUDIENCE='http://localhost:5000/'
 echo "setup.sh script executed successfully!"
