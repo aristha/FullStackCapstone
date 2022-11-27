@@ -27,6 +27,9 @@ To run the application run the following commands(window):
     python -m virtualenv env
     source env/Scripts/activate
     pip3 install -r requirements.txt
+    python manage.py db init
+    python manage.py db migrate
+    python manage.py db upgrade
     sh setup.sh
 ```
 The application is run on http://127.0.0.1:5000/ 
@@ -213,9 +216,7 @@ The API will return three error types when requests fail:
 }
 ```
 
-python manage.py db init
-python manage.py db migrate
-python manage.py db upgrade
+
 
 role
 delete:actors
