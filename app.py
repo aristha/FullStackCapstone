@@ -34,7 +34,7 @@ def create_app(test_config=None):
   @app.route("/movies", methods=["GET"])
   @requires_auth("get:movies")
   def get_movies(payload):
-
+    try:
       movies = Movie.query.all()
       formatted_movies = [movie.format() for movie in movies]
       return jsonify(
@@ -43,7 +43,9 @@ def create_app(test_config=None):
               "movies": formatted_movies
           }
       )
-
+    except:
+        print(sys.exc_info())
+        abort(422)
 
   '''
 
@@ -139,7 +141,7 @@ def create_app(test_config=None):
   @app.route("/actors", methods=["GET"])
   @requires_auth("get:actors")
   def get_actors(payload):
-
+    try:
       actors = Actor.query.all()
       formatted_actors = [actor.format() for actor in actors]
       return jsonify(
@@ -148,7 +150,9 @@ def create_app(test_config=None):
               "actors": formatted_actors
           }
       )
-
+    except:
+        print(sys.exc_info())
+        abort(422)
 
   '''
 
