@@ -52,7 +52,7 @@ class Movie(db.Model):
         return {
             'id': self.id,
             'title': self.title,
-            'releaseDate': self.release_date.strftime('%Y/%M/%d')
+            'releaseDate': self.release_date.strftime('%Y/%m/%d')
             }
 
 
