@@ -262,7 +262,11 @@ def create_app(test_config=None):
   @app.errorhandler(AuthError)
   def invalid_claims(ex):
       print(sys.exc_info())
-      return jsonify({
+      try:
+          print(ex.status_code)
+          print(ex.error)
+      except:
+        return jsonify({
                       "success": False,
                       "error": ex.status_code,
                       "message": ex.error
