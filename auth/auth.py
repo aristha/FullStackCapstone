@@ -5,11 +5,11 @@ from jose import jwt
 from urllib.request import urlopen
 import sys
 import ssl
+import os
 ssl._create_default_https_context = ssl._create_unverified_context
-
-AUTH0_DOMAIN = 'dev-dh8lpj82.us.auth0.com'
-ALGORITHMS = ['RS256']
-API_AUDIENCE = 'http://localhost:5000/'
+AUTH0_DOMAIN = os.environ['AUTH0_DOMAIN']
+ALGORITHMS = os.environ['ALGORITHMS']
+API_AUDIENCE = os.environ['API_AUDIENCE']
 
 ## AuthError Exception
 '''

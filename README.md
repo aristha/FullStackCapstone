@@ -2,8 +2,8 @@
 ## Casting Agency  App 
 The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. You are an Executive Producer within the company and are creating a system to simplify and streamline your process.
 Project use python3, postgrsql, heroku deploy
-## Host Heroku
-[App](https://appdemo-tam.herokuapp.com/)
+## Host Heroku: https://appdemo-tam.herokuapp.com
+
 ### Getting Started
 Pre-requisites and Local Development
 Developers using this project should already have Python3, pip and node installed on their local machines.
