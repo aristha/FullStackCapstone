@@ -43,14 +43,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5000/actors",
-							"protocol": "https",
+							"raw": "{{host}}actors",
 							"host": [
-								"localhost"
-							],
-							"port": "5000",
-							"path": [
-								"actors"
+								"{{host}}actors"
 							]
 						}
 					},
@@ -132,7 +127,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "{{keyExecutiveProducer}}",
+									"value": "{{keyCastingDirector}}",
 									"type": "string"
 								}
 							]
@@ -140,12 +135,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5000/actors",
-							"protocol": "https",
+							"raw": "{{host}}/actors",
 							"host": [
-								"localhost"
+								"{{host}}"
 							],
-							"port": "5000",
 							"path": [
 								"actors"
 							]
@@ -473,12 +466,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://localhost:5000/actors",
-							"protocol": "https",
+							"raw": "{{host}}/actors",
 							"host": [
-								"localhost"
+								"{{host}}"
 							],
-							"port": "5000",
 							"path": [
 								"actors"
 							]
@@ -568,7 +559,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"abc\",\n    \"age\": 12,\n    \"gender\":\"F\"\n}"
+							"raw": "{\n    \"name\": \"an\",\n    \"age\": 14,\n    \"gender\":\"F\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/actors",
@@ -619,7 +610,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"mv1\",\n    \"release_date\":\"2022-01-01 08:01:00\"\n}"
+							"raw": "{\n    \"title\": \"mv1\",\n    \"release_date\":\"2022-01-01 08:00:00\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies",
@@ -732,7 +723,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"mv1\",\n    \"release_date\":\"anc2\"\n}"
+							"raw": "{\n    \"title\": \"mv4\",\n    \"release_date\":\"2022-04-02 08:00:00\"\n}"
 						},
 						"url": {
 							"raw": "{{host}}/movies/1",
@@ -885,22 +876,22 @@
 	"variable": [
 		{
 			"key": "host",
-			"value": "https://127.0.0.1:5000",
+			"value": "https://appdemo-tam.herokuapp.com/",
 			"type": "string"
 		},
 		{
 			"key": "keyCastingAssistant",
-			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik9lUHVXZEY2TXlHaWVCc2JrMzZqTiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kaDhscGo4Mi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjM3NjM5M2FhOGIyYzJlYzYwYjJlZWU0IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImlhdCI6MTY2ODk0NjYzOSwiZXhwIjoxNjY4OTUzODM5LCJhenAiOiI0emtlaTBmUExXSHdQbUl4d05yYXpxMHBaQUFDSW5lOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmRyaW5rcyIsImdldDpkcmlua3MiLCJnZXQ6ZHJpbmtzLWRldGFpbCIsInBhdGNoOmRyaW5rcyIsInBvc3Q6ZHJpbmtzIl19.Z1KS58Jp7XyNuIAU_uOl0-SG_Z2UdUl57U41Ax1CwCs2V6wXU1rveI6QeR7wBTRozv4kr4znylbIY7jJLEoNOsnSrIM5rNUafBXYdMYvFm795_ng3RUy_tR77sIqqk5Q_5NukWUNdCube-BI8vFHeJIQvjdlDgkFiTGHIpzZNESCqVhFvRodH6zkosL7FPJ54w-JQDeZJNVD8OkLllh1B4IQDYoJ1OO4hD6DucZb-dUmr2-T8zXdNrMna0rjn0Dp2825ArwLRV2ruTroPMZZ_wdINpyG_qrDnlDCyQ3ChF4m7bvFCBatld6CVfWH8YDgHXmbRFIgAYnlJ4DgBDQxdQ",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik9lUHVXZEY2TXlHaWVCc2JrMzZqTiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kaDhscGo4Mi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjM4MmRkZGIzNzU5NWU0Yzk5NTZhMzRlIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImlhdCI6MTY2OTUyOTk5NCwiZXhwIjoxNjY5NTM3MTk0LCJhenAiOiJkZlR4SnVabVR2V3k5eHFaakpacVZkeW5PWExhdk5MMyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.KERpI-eXPXeQYdNbywtd9s2hG-Ok1mt5AbDZYjE1urVvPaNDC5W0JX0PpPzWUV13oDECwt4VMWBdjDu4Qak27UOmOCS1osCcISZeV-i2FLwkZbaZbiHFWoU6H-1K6wMNhbf_iSeGreWY7ffzX10l3G01cK1al7Lpv0U5FQRCQnxPk7rTyz5_xBbnmV0zX3ulvTiHuO4NbaKxR2XUh9taMMf5heo6r5sE1_YJpVeClSnLTRBWLVdzyRJYL_th6bRhebr9oFWaZinnGRMkr0Ebz_CHajrXnp-CW96kJHKzPGg4TeK1XjqO44j5__OU3-qWRiEluCTShRXSXhaHn8zYCw",
 			"type": "string"
 		},
 		{
 			"key": "keyCastingDirector",
-			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik9lUHVXZEY2TXlHaWVCc2JrMzZqTiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kaDhscGo4Mi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjM3NjM5MTc4ZDIxYjRmNjA0YzkwNTlmIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImlhdCI6MTY2ODk0Nzc5OCwiZXhwIjoxNjY4OTU0OTk4LCJhenAiOiI0emtlaTBmUExXSHdQbUl4d05yYXpxMHBaQUFDSW5lOCIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmRyaW5rcyIsImdldDpkcmlua3MtZGV0YWlsIl19.sLKerGXCV5s8nZZmz4-6yuYQgHGOfKS-fGZc5kTobOsScb_765ZzH27NMikKKXHXKQ8ginp4CU_mnD-gpG29TjE64BxtRxdZ5lhQmrRIYIPV-LCmJicene5iWc2Z35H11gh9muHCwP_Qv_D5bwaAuLf9nKqyWpcSSajyWb7jC4W2XYPz4OWwnyVhwcpDhP6NKFRFi-RLFugqD6YrZ7m0Zc26QxpnCn-FNyMIBrrFQDWuRjQ49SUWHSoH6ztAXC9_NgOMH-ABlAHJNTXcSGV6ViND8RGO36iKZBNklV7n7urm1ah8RLHwhegmZZ8sagS_B4pvg7FP32eyBbmWwvUHjQ",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik9lUHVXZEY2TXlHaWVCc2JrMzZqTiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kaDhscGo4Mi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjM4MmRlMGIzNzU5NWU0Yzk5NTZhMzUxIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImlhdCI6MTY2OTUyOTkwMCwiZXhwIjoxNjY5NTM3MTAwLCJhenAiOiJkZlR4SnVabVR2V3k5eHFaakpacVZkeW5PWExhdk5MMyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.KhgVTF_7WpWkvsSxbTuJ0OHA-4CIox_3sVdO00gAkWh9B-rCrG6zkIa-bSIDEAf5kqporoqmFd2Eq6c0LGeitEVhgcIB-93vWYvxvEuUvM_DdHjBmojKjPB5eP-fJN7ezPRnFR1NXJvLZwmIMyqtvRFuAvPBbIeaT0QpArZ-xsWAZY0GBk-7pUCrLStHqAEkRrbYnf0z9lnh3F_A0O_a9j3Wr4gIpaP0pZfNhiQuo6luo-mubTURWySJ-s73KFHLtqW7ncO5NIWxsgs4mNmgz-ZyjSG18nmdrGQiS2Kdac6MMcUpTeJRwT25f6zEhgguuUWs4vPGiDdcfB56lMxLUg",
 			"type": "string"
 		},
 		{
 			"key": "keyExecutiveProducer",
-			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik9lUHVXZEY2TXlHaWVCc2JrMzZqTiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kaDhscGo4Mi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjM4MjRlZWM4ZDIxYjRmNjA0Yzk0MzQzIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImlhdCI6MTY2OTUyMDkzNywiZXhwIjoxNjY5NTI4MTM3LCJhenAiOiJkZlR4SnVabVR2V3k5eHFaakpacVZkeW5PWExhdk5MMyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.gprBD7_B0beed0K7aI8bEpL7Lku-BGr2VpMthu65gkChSONZCxrEyRmqr5K0LNa8pZdtD9i9JOScUhQ709-aKt0G-gaE4hafR3JECUeMGE3YlruaAk6XCLmQ-qvaA-NYfnOxir9_Yndev_o4wvNyYPHQQKal_vnjwhQeCHFM7DTpkuporDt62IBiIGZ8iml8yniy3bEx5kX6JZrwlyy_S_Hx9zw47tthjoH4RGo-wLTG7-F3rCitdIza4FrrY8RtRw-7fL0nAEOovFtsA3vr8FyxoLLusiObORKywWLZJH_ARlY-fgtYnxYj8GREXcxRWN0pu1PNnnenC7gVtwxpEw",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik9lUHVXZEY2TXlHaWVCc2JrMzZqTiJ9.eyJpc3MiOiJodHRwczovL2Rldi1kaDhscGo4Mi51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjM4MjRlZWM4ZDIxYjRmNjA0Yzk0MzQzIiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwLyIsImlhdCI6MTY2OTUyODIxOCwiZXhwIjoxNjY5NTM1NDE4LCJhenAiOiJkZlR4SnVabVR2V3k5eHFaakpacVZkeW5PWExhdk5MMyIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.xSWgYhQkf_0xz56mOJpXCMOA5QAfJ5KOh5KdsCJLy9fcPLzameSXrrlqzQVr0trvy5WcZ71uQ7Dn_tgjF-Lvp-4IjgZTEs71KUFpQjYy3hx0cEanv7Rbjsqha-k5wJgO5xLOO4zIOcGAp9-8YTkeU06H8gCaNI86wwSJSqa5ncppQDJn5zbhdVXyK9QfBxvoDD7XJlZ4-CoZTvPiYbTNzaWrtUekmeOZojcZwnpLxsiOniyCchuPRYV4dPZcYAdbH_EJVxboPsiiydlkf53BfKUeM-RxsUi8kYadqX_crZjQzVpLqUrppW8MkYGxjvUx3NGIswnqnbf7r_PJrogyEQ",
 			"type": "string"
 		}
 	]
