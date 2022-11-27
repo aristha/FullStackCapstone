@@ -258,7 +258,7 @@ def create_app(test_config=None):
           "error": 404,
           "message": "resource not found"
       }), 404
- 
+
   @app.errorhandler(AuthError)
   def invalid_claims(ex):
       return jsonify({
