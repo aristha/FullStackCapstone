@@ -61,7 +61,7 @@ def create_app(test_config=None):
           releaseDate = body.get("release_date", None)
           movie_new = Movie(title=title,release_date=releaseDate)
           movie_new.insert()
-        
+
           movies = Movie.query.all()
           formatted_movies = [movie.format() for movie in movies]
           return jsonify(
