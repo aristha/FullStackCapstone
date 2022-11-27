@@ -94,7 +94,7 @@ def create_app(test_config=None):
           title = body.get("title", None)
           releaseDate = body.get("release_date", None)
           movie.title = title
-          movie.recipe = releaseDate
+          movie.release_date = releaseDate
           movie.update()
           movies = Movie.query.all()
           formatted_movies = [movie.format() for movie in movies]
